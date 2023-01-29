@@ -1,7 +1,7 @@
 const express=require('express');
 const morgan=require('morgan');
 const cors=require('cors');
-const config=require('dotenv');
+require('dotenv').config();
 const router=require('./router/route.js');
 
 
@@ -15,7 +15,7 @@ const app = express();
 app.use(morgan('tiny'));
 app.use(cors());
 app.use(express.json());
-config;
+config();
 
 
 /** appliation port */
